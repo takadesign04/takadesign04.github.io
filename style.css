@@ -1,0 +1,803 @@
+/* Reset & Basic Styles */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8; /* 全体の背景色：シンプルで分かりやすく、飽きない薄いグレー */
+    -webkit-text-size-adjust: 100%; /* Safari text size fix */
+}
+
+.container {
+    max-width: 90%; /* モバイル優先で広めに設定 */
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.2em; } /* スポンサーランクの見出し用 */
+
+p {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+.header {
+    /* ヘッダーを完全に非表示にする */
+    display: none;
+}
+
+/* Sections */
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section:nth-of-type(odd) { /* 奇数番目のセクションの背景色（画像を参考に） */
+    background-color: #fefefe;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #e0f2f7; /* 薄い青の背景 */
+    padding: 40px 0 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* FVの画像を配置するための新しいスタイル */
+.hero-image-full {
+    margin: 0 auto;
+    width: 90%; /* モバイルで広めに表示 */
+    max-width: 700px; /* デスクトップでの最大幅 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px; /* CTAボタンとの間にスペース */
+}
+
+.hero-image-full img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* 以前のhero-section内のテキスト関連のスタイルは不要になる可能性がありますが、
+   既存のhero-imageセレクタは別の画像に使用されているため、そのまま残します。
+   もしFVの画像と既存のアプリUI画像が同じ要素になる場合は調整が必要です。
+*/
+.hero-section .sub-catch,
+.hero-section .main-catch,
+.hero-section .hero-sub-text,
+.hero-section .hero-sub-text-strong {
+    display: none; /* FVのテキストを非表示にする */
+}
+
+
+/* CTA Buttons */
+.cta-buttons {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.primary-btn {
+    background-color: #007bff;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.app-store-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.app-store-links img {
+    width: 120px;
+    height: auto;
+}
+
+.small-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* About Section */
+.about-section p {
+    text-align: left; /* 画像に合わせて調整 */
+    margin-bottom: 1em;
+}
+
+.about-section p strong {
+    color: #007bff;
+}
+
+.about-section .problem-solution-text {
+    text-align: center; /* 中央に配置 */
+    font-weight: 700; /* 太字 */
+    line-height: 1.8; /* 行間を広げて改行を強調 */
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* Company Info Section */
+.company-info-section {
+    background-color: #f8f8f8; /* シンプルな背景 */
+    padding: 40px 0;
+}
+
+.company-info-section .company-details {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.company-info-section .company-details p {
+    text-align: left;
+    margin-bottom: 0.8em;
+    color: #555;
+}
+
+.company-info-section .company-details p strong {
+    color: #333;
+}
+
+
+/* Features Section */
+.features-section {
+    background-color: #f0f8ff; /* 画像の薄い青背景を再現 */
+}
+
+.features-section .section-title-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* テキストとアイコンの間のスペース */
+    margin-bottom: 1.5em;
+}
+
+.features-section .section-title-with-icon .free-badge img {
+    height: 30px; /* アイコンの高さ調整 */
+    width: auto;
+    vertical-align: middle;
+}
+
+.features-section .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.features-section .feature-list li {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.features-section .feature-list h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.features-section .feature-list p {
+    font-size: 0.95em;
+    color: #666;
+    text-align: center;
+}
+
+/* How-to-use Section */
+.how-to-use-section {
+    background-color: #e6f7e6; /* 画像の薄い緑背景を再現 */
+}
+
+.how-to-use-section .steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* 各ステップ間の余白を広げる */
+    margin-top: 20px;
+}
+
+.how-to-use-section .step-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.step-number {
+    font-size: 2em;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 10px;
+    background-color: #d9edf7; /* ステップ番号の背景色 */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-item h3 {
+    margin-top: 10px;
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+}
+
+.step-item p {
+    font-size: 0.95em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 15px; /* 画像との間隔 */
+}
+
+.step-item .step-image {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.step-item .step-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+/* CTA Bottom Section */
+.cta-bottom-section {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.cta-bottom-section h2 {
+    color: #fff;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+}
+
+.cta-text-large {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #fff; /* 全体を白に */
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cta-text-large .highlight {
+    color: #ffeb3b; /* 黄色で強調 */
+}
+
+.cta-text-large .small-note {
+    font-size: 0.7em;
+    font-weight: 400;
+    display: block;
+    margin-top: 5px;
+    color: #fff; /* 白に */
+}
+
+
+/* Partner Section */
+.partner-section {
+    background-color: #fefefe;
+    padding-top: 30px;
+}
+
+.partner-section h2 {
+    color: #007bff;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+/* セクションタイトルの下線 */
+.section-title-line::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.partner-section .partner-intro {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.partner-offers {
+    margin-bottom: 30px;
+}
+
+/* Service加盟企業とバナー掲載企業 */
+.partner-offer {
+    background-color: #e0f2f7; /* 薄い青の背景 */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left; /* テキスト左寄せ */
+}
+
+.partner-offer h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: #333;
+    text-align: center; /* タイトルは中央寄せ */
+}
+
+.partner-offer .limited {
+    color: #e67e22; /* 限定数をオレンジで強調 */
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.partner-offer p {
+    font-size: 0.95em;
+    color: #666;
+    text-align: left;
+    margin-bottom: 0.8em;
+}
+
+.partner-offer .placement-image {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.partner-offer .placement-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.partner-offer .listing-details {
+    font-size: 0.9em;
+    font-weight: 700;
+    text-align: center; /* 中央に配置 */
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.partner-offer .price-display {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #007bff;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.partner-offer .small-note {
+    font-size: 0.8em;
+    color: #888;
+    text-align: left;
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+}
+
+
+/* 各種スポンサー企業 (料金表スタイル) */
+.sponsor-plans {
+    margin-top: 40px;
+}
+
+.sponsor-plans h3 {
+    font-size: 1.6em;
+    margin-bottom: 1em;
+    color: #007bff;
+}
+
+.sponsor-intro-sub {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.pricing-table {
+    display: flex;
+    flex-wrap: wrap; /* カラムを折り返す */
+    justify-content: center; /* 中央寄せ */
+    gap: 20px; /* プラン間の余白 */
+    margin-top: 30px;
+}
+
+.pricing-plan {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 25px;
+    text-align: center;
+    flex: 1 1 calc(100% - 40px); /* モバイルでは1列表示 */
+    max-width: 320px; /* 各プランの最大幅 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* コンテンツを上下に揃える */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-bottom: 8px solid; /* 豪華さを表現するためのボーダー */
+}
+
+.pricing-plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.blue-rank { border-color: #6c757d; } /* グレー系 */
+.silver-rank { border-color: #28a745; } /* 緑系 */
+.platinum-rank { border-color: #e67e22; } /* オレンジ系 */
+.official-main { border-color: #007bff; } /* 青系 */
+
+
+.pricing-plan h4 {
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.blue-rank h4 { color: #6c757d; }
+.silver-rank h4 { color: #28a745; }
+.platinum-rank h4 { color: #e67e22; }
+.official-main h4 { color: #007bff; }
+
+
+.pricing-plan .rank-description {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 1.5em;
+    height: 3em; /* 高さを揃えるため */
+    overflow: hidden; /* はみ出しを隠す */
+    text-align: center;
+}
+
+.plan-features {
+    flex-grow: 1; /* スペースを埋める */
+    text-align: left;
+    margin-bottom: 1.5em;
+}
+
+.plan-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan-features ul li {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 0.8em;
+    padding-left: 20px;
+    position: relative;
+    text-align: left;
+}
+
+.plan-features ul li::before { /* チェックマークのアイコン */
+    content: "\f00c"; /* Font Awesomeのチェックマーク */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #28a745; /* 緑色 */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.plan-price {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+.plan-contract {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 1.5em;
+}
+
+.plan-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    display: inline-block;
+    width: auto;
+    max-width: none;
+    box-shadow: none;
+}
+
+.plan-btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+.bottom-contact-btn {
+    background-color: #ff9800; /* オレンジ色のボタン */
+    margin-top: 40px;
+    max-width: 400px;
+}
+
+.bottom-contact-btn:hover {
+    background-color: #f57c00;
+}
+
+
+/* スポンサー企業紹介 */
+.sponsor-list {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.sponsor-list h3 {
+    color: #007bff;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.sponsor-list h3.section-title-line::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #007bff;
+    margin: 10px auto 0;
+    border-radius: 1px;
+}
+
+.sponsor-list .sponsor-intro-sub {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.sponsor-logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* ロゴ間の余白 */
+    margin-top: 20px;
+}
+
+.sponsor-item {
+    text-align: center;
+    flex: 0 0 calc(50% - 15px); /* モバイルで2列表示 */
+    max-width: 150px; /* ロゴアイテムの最大幅 */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.sponsor-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.sponsor-item p {
+    font-size: 0.85em;
+    color: #666;
+    margin: 0;
+    line-height: 1.2;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333; /* 暗い背景色 */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 8px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    color: #aaa;
+    margin-top: 20px;
+}
+
+/* Desktop Styles (Media Queries) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    h1 { font-size: 2.8em; }
+    h2 { font-size: 2.2em; }
+    h3 { font-size: 1.6em; }
+    h4 { font-size: 1.3em; }
+
+    /* hero-section内のテキストは非表示のまま */
+    /* .hero-section .main-catch {
+        font-size: 3.5em;
+    } */
+
+    .hero-image {
+        max-width: 450px; /* デスクトップでの画像幅 */
+    }
+
+    .btn {
+        max-width: 350px; /* ボタンの幅 */
+        font-size: 1.2em;
+    }
+
+    .app-store-links img {
+        width: 150px;
+    }
+
+    .about-section p {
+        text-align: center; /* デスクトップでは中央寄せにする場合 */
+    }
+
+    .features-section .feature-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .how-to-use-section .steps-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .how-to-use-section .step-item {
+        flex: 1 1 calc(50% - 20px); /* 2列表示 */
+        max-width: 350px;
+    }
+
+    .cta-bottom-section h2 {
+        font-size: 2.5em;
+    }
+
+    /* 各種スポンサー企業 (料金表スタイル) - デスクトップ用4カラム */
+    .pricing-table {
+        flex-wrap: nowrap; /* 4カラムなので折り返さない */
+        justify-content: space-between; /* 均等配置 */
+    }
+
+    .pricing-plan {
+        flex: 1 1 calc(25% - 15px); /* 4カラム表示 */
+        max-width: 250px; /* 各プランの最大幅を調整 */
+    }
+
+    .partner-offer {
+        text-align: center;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .partner-offer p {
+        text-align: center;
+    }
+
+    .partner-offer .small-note {
+        text-align: center;
+    }
+
+    .sponsor-logos-grid {
+        gap: 20px;
+    }
+
+    .sponsor-item {
+        flex: 0 0 calc(20% - 20px); /* デスクトップで5列表示 (画像のロゴ数に合わせて調整) */
+        max-width: 180px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+
+    h1 { font-size: 3.2em; }
+    h2 { font-size: 2.5em; }
+
+    /* hero-section内のテキストは非表示のまま */
+    /* .hero-section .main-catch {
+        font-size: 4em;
+    } */
+
+    .how-to-use-section .step-item {
+        flex: 1 1 calc(25% - 20px); /* 4列表示 */
+        max-width: 230px;
+    }
+
+    .pricing-table {
+        gap: 30px;
+    }
+
+    .pricing-plan {
+        flex: 1 1 calc(25% - 22.5px); /* 4カラム表示 */
+        max-width: 280px;
+    }
+
+    .sponsor-item {
+        flex: 0 0 calc(16.66% - 20px); /* ロゴの数を考慮して6列表示なども可能 */
+        max-width: 150px;
+    }
+}
